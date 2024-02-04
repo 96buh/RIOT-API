@@ -1,0 +1,130 @@
+.search-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.searchNbtn {
+  display: flex;
+  flex-direction: row;
+}
+.search {
+  height: 30px;
+  width: 250px;
+}
+
+.submit-btn {
+  margin-left: 5px;
+  width: 50px;
+  height: 35px;
+}
+/* profile icon */
+.profileIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+}
+
+.level {
+  font-size: 12px;
+  background-color: #424254;
+  color: white;
+  border-radius: 10px;
+  padding: 0px 8px;
+  position: absolute;
+  top: 100%; /* 将 span 定位到图片底部 */
+  left: 50%; /* 将 span 定位到图片水平居中 */
+  transform: translateX(-50%); /* 通过 translateX(-50%) 将 span 居中 */
+  margin-top: -11px;
+}
+
+.header-profile {
+  display: flex;
+}
+.info {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+
+/* rank */
+
+.header {
+  background-color: #31313c;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  color: white;
+  width: 350px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: sans-serif;
+}
+.content {
+  background-color: #31313c;
+  padding: 12px;
+  margin-bottom: 5px;
+  width: 350px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unranked {
+  color: #515163;
+  font-size: 14px;
+  margin-left: 190px;
+}
+
+.header2 {
+  background-color: #31313c;
+  padding: 12px;
+  margin-bottom: 1px;
+  color: white;
+  width: 350px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.info2 {
+  align-self: center;
+  margin-left: -10px;
+  font-family: sans-serif;
+}
+
+.tier {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.lp {
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #9e9eb1;
+  font-size: 12px;
+}
+
+.win-lose-container {
+  color: #7b7a8e;
+  font-family: sans-serif;
+  font-size: 12px;
+  align-self: center;
+  text-align: right;
+}
+
+.win-lost {
+  margin-bottom: 5px;
+  align-self: flex-end;
+}

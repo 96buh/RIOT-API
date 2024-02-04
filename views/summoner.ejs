@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= gameName %>#<%= tagLine %></title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-profile">
+        <div class="icon">
+          <img
+            class="profileIcon"
+            src="/img/profileicon/<%= summoner_data.profileIconId %>.png"
+            alt=""
+          />
+          <span class="level"><%= summoner_data.summonerLevel %></span>
+        </div>
+
+        <div class="info">
+          <strong><%= gameName %></strong>
+          <span>#<%= tagLine %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ranked-solo-container">
+      <% if(league_data[0]){ %>
+      <div class="header">Ranked Flex</div>
+      <div class="content">
+        <div class="tier-img">
+          <img
+            width="72"
+            src="/img/tier/Rank=<%= league_data[0].tier %>.png"
+            alt=""
+          />
+        </div>
+        <div class="info2">
+          <div class="tier">
+            <%= league_data[0].tier %> <%= league_data[0].rank %>
+          </div>
+          <div class="lp"><%= league_data[0].leaguePoints %>LP</div>
+        </div>
+        <div class="win-lose-container">
+          <div class="win-lost">
+            <%= league_data[0].wins %>W <%= league_data[0].losses %>L
+          </div>
+          <div class="winrate">
+            Win Rate <%=
+            Math.round(((league_data[0].wins)/(league_data[0].wins+league_data[0].losses))
+            * 100) %>%
+          </div>
+        </div>
+      </div>
+      <% }else{ %>
+      <div class="header">
+        Ranked Flex <span class="unranked">Unranked</span>
+      </div>
+      <% } %>
+    </div>
+    <div class="ranked-flex-container">
+      <% if(league_data[1]){ %>
+      <div class="header">Ranked Flex</div>
+      <div class="content">
+        <div class="tier-img">
+          <img
+            width="72"
+            src="/img/tier/Rank=<%= league_data[1].tier %>.png"
+            alt=""
+          />
+        </div>
+        <div class="info2">
+          <div class="tier">
+            <%= league_data[1].tier %> <%= league_data[1].rank %>
+          </div>
+          <div class="lp"><%= league_data[1].leaguePoints %>LP</div>
+        </div>
+        <div class="win-lose-container">
+          <div class="win-lost">
+            <%= league_data[1].wins %>W <%= league_data[1].losses %>L
+          </div>
+          <div class="winrate">
+            Win Rate <%=
+            Math.round(((league_data[1].wins)/(league_data[1].wins+league_data[1].losses))
+            * 100) %>%
+          </div>
+        </div>
+      </div>
+      <% }else{ %>
+      <div class="header">
+        Ranked Flex <span class="unranked">Unranked</span>
+      </div>
+      <% } %>
+    </div>
+    <script>
+      // 获取包含 "unranked" 类的所有元素
+      var unrankedElements = document.getElementsByClassName("unranked");
+
+      // 循环遍历所有找到的元素
+      for (var i = 0; i < unrankedElements.length; i++) {
+        // 获取当前元素的父元素
+        var parentHeader = unrankedElements[i].closest(".header");
+
+        // 检查是否找到了父元素
+        if (parentHeader) {
+          // 添加或替换类名
+          parentHeader.classList.add("header2"); // 替换 "your-new-class" 为你希望添加的新类名
+        }
+      }
+    </script>
+  </body>
+</html>

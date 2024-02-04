@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIOT API</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <% if(locals.summoner_data){ %>
+    <img
+      src="/img/profileicon/<%= summoner_data.profileIconId %>.png"
+      class="profileIcon"
+    />
+    <% } %>
+
+    <form action="/summoners" method="post">
+      <div class="search-area">
+        <h1 class="title">搜尋召喚師名稱</h1>
+        <div class="searchNbtn">
+          <select name="region">
+            <option>TW</option>
+            <option>KR</option>
+            <option>JP</option>
+          </select>
+          <input class="search" type="text" name="username" />
+          <button class="submit-btn" type="submit">送出</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
